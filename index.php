@@ -21,13 +21,21 @@ require_once("config.php");
 
 //echo json_encode($search);
 
-//Carrega um usuário usando o login e a senha
+//*************Carrega um usuário usando o login e a senha************
+
+//$usuario = new Usuario();
+//$usuario->login("Afonso", "aaaa");
+
+//echo $usuario;
+
 
 $usuario = new Usuario();
-$usuario->login("Afonso", "aaaa");
+
+$usuario->loadById(1);
+
+$usuario->update("Afonso", "1234");
 
 echo $usuario;
-
 
 
 ?>
