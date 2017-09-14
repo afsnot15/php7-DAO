@@ -8,14 +8,14 @@ require_once("config.php");
 
 //echo $afonso;
 
-//Carrega uma lista de usuários
+//******************Carrega uma lista de usuários******************
 
 //$lista = Usuario::getList();
 
 //echo json_encode($lista);
 
 
-//Carrega uma lista buscando pelo login
+//****************Carrega uma lista buscando pelo login**************
 
 //$search = Usuario::search("af");
 
@@ -29,13 +29,29 @@ require_once("config.php");
 //echo $usuario;
 
 
-$usuario = new Usuario();
 
-$usuario->loadById(1);
+//**************ATUALIZANDO UM REGISTRO**************************
 
-$usuario->update("Afonso", "1234");
+//$usuario = new Usuario();
 
-echo $usuario;
+//$usuario->loadById(1);
+
+//$usuario->update("Afonso", "1234");
+
+//echo $usuario;
+
+//*****************INSERINDO UM REGISTRO******************
+
+$aluno = new Usuario();
+
+$aluno->setDeslogin("Aluno");
+$aluno->setDessenha("1011");
+
+$aluno->insert();
+
+
+
+echo $aluno;
 
 
 ?>
